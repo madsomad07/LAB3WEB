@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat dropdown menu dan listbox multiple selection</title>
+</head>
+<style>
+    form p > label{
+        display: inline-block;
+        width: 100px;
+    }
+    form input[type="text"], form textarea {
+        border: 1px solid #197a43;
+    }
+    form input[type="submit"]{
+        border: 1px solid #197a43;
+        background-color: #197a43;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 5px 15px;
+    }
+</style>
+    <body>
+        <form action="Proses.php" method="post">
+            <fieldset>
+                <legend>data pelanggan</legend>
+                <p>
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama">
+                </p>
+                <p>
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" cols="20" rows="3"></textarea>
+                </p>
+                <p>
+                    <label>Jenis Kelamin</label>
+                    <input id="jk_l" type="radio" name="kelamin" value="L"/><label for="jk_l">Laki-Laki</label>
+                    <input id="jk_p" type="radio" name="kelamin" value="P"/><label for="jk_p">Perempuan</label>
+                </p>
+                <p><input type="submit" value="login"></p>
+            </fieldset>
+        </form>
+    </body>
+    <style>
+        .mainmenubtn {
+            background-color: rgb(0, 110, 255);
+            color: rgb(253, 253, 253);
+            border: none;
+            cursor: pointer;
+            padding:20px;
+            margin-top:20px;
+        }
+        .mainmenubtn:hover {
+            background-color: rgb(7, 0, 66);
+            }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-child {
+            display: none;
+            background-color: rgb(80, 143, 168);
+            min-width: 200px;
+        }
+        .dropdown-child a {
+            color: rgb(0, 0, 255);
+            padding: 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown:hover .dropdown-child {
+            display: block;
+        }
+        </style>
+    <body>
+        <div class="dropdown">
+            <button class="mainmenubtn">Fakultas</button>
+            <div class="dropdown-child">
+              <a href="#">Teknik Informatika</a>
+              <a href="#">Teknik Sipil</a>
+              <a href="#">Teknik Industri</a>
+            </div>
+        </body>
+</html>
